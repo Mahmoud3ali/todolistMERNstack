@@ -1,0 +1,39 @@
+{
+  "name": "todolistmern",
+  "version": "1.0.0",
+  "description": "todolist using MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahmoud3ali/TodoListMern.git"
+  },
+  "keywords": [
+    "MERNstack",
+    "todolist",
+    "tutorial",
+    "fullstack"
+  ],
+  "author": "Mahmoud Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahmoud3ali/TodoListMern/issues"
+  },
+  "homepage": "https://github.com/Mahmoud3ali/TodoListMern#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.13",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
