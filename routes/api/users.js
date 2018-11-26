@@ -14,6 +14,9 @@ const validateLoginInput = require("../../validation/login");
 // Load user model
 const User = require("../../models/User");
 
+// Load profile model
+const Profile = require("../../models/profile");
+
 // @route GET api/users/test
 // @desc Tests user route
 // @access Public
@@ -33,6 +36,7 @@ router.post("/register", (req, res) => {
       errors.email = "Email already exists";
       return res.status(400).json(errors);
     } else {
+      // create user
       const newUser = new User({
         name: req.body.name,
         email: req.body.email,
@@ -44,7 +48,13 @@ router.post("/register", (req, res) => {
           newUser.password = hash;
           newUser
             .save()
-            .then(user => res.json(user))
+            .then(user => {
+              res.json(user);
+              // create profile
+              const profileData = {};
+              profileData.user = user.id;
+              new Profile(profileData).save();
+            })
             .catch(err => console.log(err));
         });
       });
