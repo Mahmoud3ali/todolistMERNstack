@@ -22,7 +22,7 @@ const Profile = require("../../models/profile");
 // @access Public
 router.get("/test", (req, res) => res.json({ msg: "users works" }));
 
-// @route GET api/users/register
+// @route POST api/users/register
 // @desc Register new user
 // @access Public
 router.post("/register", (req, res) => {
